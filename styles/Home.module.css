@@ -1,28 +1,11 @@
 
 .container {
-    padding: 0 2rem;
+    padding: 0;
+    display: block;
     @apply text-white min-h-screen;
 }
 
-.main {
-    padding: 4rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-
 .footer {
-    padding: 8px;
     text-align: center;
     border-top: 1px solid #eaeaea;
     position: absolute;
@@ -30,55 +13,9 @@
     bottom: 0;
     right: 0;
     left: 0;
-    @apply text-sm sm:text-lg xl:text-2xl;
 }
 
-.description {
-    text-align: center;
-}
 
-.description {
-    margin: 1rem 0;
-    line-height: 1.5;
-    @apply text-base sm:text-3xl
-}
-
-.titleMotion {
-    position: relative;
-    font-family: "Avenir Next", sans-serif;
-    letter-spacing: 0.08em;
-    display: inline-block;
-    color: mediumblue;
-    font-weight: 900;
-    margin: 1rem 0;
-    text-transform: uppercase;
-    @apply text-3xl sm:text-7xl;
-
-
-}
-
-.textMotion {
-    position: relative;
-    font-family: "Avenir Next", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-style: italic;
-    letter-spacing: 0.06em;
-    display: inline-block;
-    @apply text-4xl sm:text-7xl;
-}
-
-.textMotion:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: attr(filter-content);
-    filter: url(#motion-blur-filter);
-}
-
-.svg {
-    display: none;
-}
 
 
 

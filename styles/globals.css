@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 
-
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format('truetype');
+}
 
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-
-  @apply bg-gradient-to-t from-[#1A2980] to-[#26D0CE] md:bg-gradient-to-r from-[#1A2980] to-[#26D0CE];
-
 }
 
 
