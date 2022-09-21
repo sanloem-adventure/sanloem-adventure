@@ -14,11 +14,10 @@ const ContactPage: NextPage = () => {
         <React.Fragment>
             <div className="flex flex-col justify-between p-4">
                 <div className="bg-green-500 border-l-4 border-green-600 text-white-700 p-4 mb-2" role="alert">
-                    <p className="font-bold">Thank you for submitting this form.</p>
-                    <p> Someone should get back to you
-                        within 24-48 hours.</p>
+                    <p className="font-bold">Merci d'avoir soumis ce formulaire.</p>
+                    <p>Nous reviendrons vers vous bientôt.</p>
                 </div>
-                <button className="bg-sky-900 hover:bg-sky-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase" onClick={() => router.replace("/", undefined, { shallow: true })}> Submit Another</button>
+                <button className="bg-sky-900 hover:bg-sky-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline uppercase" onClick={() => router.replace("/", undefined, { shallow: true })}> Soumettre un autre</button>
             </div>
         </React.Fragment>
     );
@@ -43,16 +42,16 @@ const ContactPage: NextPage = () => {
 
             <div className="mb-4 text-left">
                 <label className="block text-gray-700 text-sm font-bold mb-2 uppercase" htmlFor="fullName">
-                    Full Name *
+                    Nom, Prénom *
                 </label>
                 <input required  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                       id="name" name="name"  onChange={(e) => setSubmitterName(e.target.value)} type="text" placeholder="Full Name" />
+                       id="name" name="name"  onChange={(e) => setSubmitterName(e.target.value)} type="text" placeholder="Nom, Prénom" />
             </div>
             <div className="mb-4 text-left">
                 <label className="block text-gray-700 text-sm font-bold mb-2 uppercase" htmlFor="email">
-                    Email *
+                Courriel *
                 </label>
-                <input required  id="email" placeholder="Email" type="email" className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email"/>
+                <input required  id="email" placeholder="Courriel" type="email" className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email"/>
 
             </div>
             {/*<label className="block text-gray-700 text-sm font-bold mb-2 uppercase"  htmlFor="message">Message *</label>*/}
@@ -61,7 +60,7 @@ const ContactPage: NextPage = () => {
                 <button
                     className="bg-sky-900 hover:bg-sky-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit">
-                    Send
+                    Envoi
                 </button>
             </div>
         </form>
