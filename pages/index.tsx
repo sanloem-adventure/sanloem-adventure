@@ -19,7 +19,7 @@ const Home: NextPage = () => {
                   <Image src={"/assets/images/telesiege6-logo.svg"} alt="logo chairlift6" width="350px"
                          height="300px"
                           />
-                  <span className="uppercase text-2xl font-medium font-inter">coming soon</span>
+                  <span className="uppercase text-2xl font-medium font-inter">BIENTOT DISPONIBLE</span>
               </section>
           </main>
           <footer className="">
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                   <a  href="https://labs.haystack.asia/"
                       target="_blank"
                       rel="noopener noreferrer" >
-                      Made with ❤️By Haystack Labs Studios CO. LTD. <span className={'hidden sm:inline'}>  All rights reserved &copy;{new Date().getFullYear()} in Phnom Penh. </span>
+                      Fabriqué avec ❤️ Par Haystack Labs Studios CO. LTD. <span className={'hidden sm:inline'}>  Tous les droits sont réservés &copy;{new Date().getFullYear()} à Phnom Penh. </span>
                   </a>
               </div>
           </footer>
