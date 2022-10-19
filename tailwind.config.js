@@ -13,6 +13,9 @@ module.exports = {
         'busket-image': "url('/images/busket.jpg')",
         'logo-en': "url('/images/logo-en.png')",
         'logo-fr': "url('/images/logo-fr.png')",
+      },
+      variants: {
+        fill: ['hover', 'focus']
       }
     },
     letterSpacing: {
