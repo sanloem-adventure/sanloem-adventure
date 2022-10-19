@@ -19,10 +19,10 @@ export default function Home() {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
-      <header className={`flex flex-col py-10 bg-no-repeat bg-cover bg-[url('/images/header-image.jpg')] `}>
-        <nav className="text-white flex flex-row justify-between w/12">
-          <a href="/" className="text-xl indent-10 font-light tracking-large text-start">{title}</a>
-          <div className="flex flex-row gap-36 text-xl font-light px-20">
+      <header className={`flex flex-col py-10 min-h-full h-full bg-no-repeat bg-auto bg-center bg-[url('/images/header-image.jpg')] `}>
+        <nav className="text-white flex flex-row justify-between">
+          <a href="/" className="indent-10 font-light tracking-large text-start">{title}</a>
+          <div className="flex flex-row gap-32 font-light px-10">
             <a href="/">LOTS</a>
             <a href="/">CONTACTEZ</a>
             <span className="flex flex-row gap-1">
@@ -32,17 +32,17 @@ export default function Home() {
             </span>
           </div>
         </nav>
-        <div className="flex flex-row justify-end w-full py-20 h-auto mt-20 pr-20">
+        <div className="flex flex-row justify-end w-full py-4 h-auto mt-20 pr-20">
           <div className="flex flex-col justify-end w-1/2">
             <h2 className="text-center text-white text-2xl font-light">{header_description}</h2>
           </div>
           <div className="flex flex-col px-10 w-1/2 h-auto">
-            <div className="self-start">
-              <img className="w-72 h-48" src={logo} />
+            <div className="self-center">
+              <img className="w-48 h-28" src={logo} />
             </div>
-            <div className="text-white text-center text-start px-40 mt-20 gap-20">
-              <h2 className="text-4xl font-normal uppercase leading-loose">{header_title}</h2>
-              <a href="#contact" className="uppercase text-white font-light bg-dark-blue py-4 rounded-lg w-1/2 self-center px-14 mt-10">Contact US</a>
+            <div className="text-white text-center text-start px-40 mt-10 gap-10">
+              <h2 className="text-lg font-normal uppercase leading-loose">{header_title}</h2>
+              <a href="#contact" className="uppercase text-white font-light bg-dark-blue py-4 rounded-lg w-1/2 self-center px-4 mt-10">Contact US</a>
             </div>
           </div>
         </div>
@@ -184,32 +184,42 @@ export default function Home() {
             </div>
           </div>
         </session>
-        <session className="flex flex-col py-20 bg-secondary">
+        <session className="flex flex-col py-20 bg-secondary gap-10">
           <h4 className="text-center text-2xl font-light">CONTACT FORM</h4>
-          <div className="grid grid-cols-5 ">
-            <div className="col-span-3 flex flex-col gap-10">
-              <form className="self-end font-light text-sm">
-                <label className="grid grid-cols-2 gap-4">
-                  <span className="text-right">FIRST NAME</span>
-                  <input type="text" className="rounded-lg w-80"/>
+          <div className="flex flex-row w-full">
+            <div className="flex flex-col gap-10 w-7/12">
+              <form className="self-end font-light text-sm flex flex-col gap-6 mr-20">
+                <label className="flex flex-row gap-4 w-full justify-end">
+                  <span className="self-center text-right w-5/12">FIRST NAME</span>
+                  <input type="text" className="rounded-lg w-7/12 px-4 py-2"/>
                 </label>
-                <label className="grid grid-cols-2 gap-4">
-                  <span className="text-right">Last NAME</span>
-                  <input type="text" className="rounded-lg w-80" />
+                <label className="flex flex-row gap-4 w-full justify-end">
+                  <span className="self-center text-right w-5/12">Last NAME</span>
+                  <input type="text" className="rounded-lg w-7/12 px-4 py-2" />
                 </label>
-                <label className="grid grid-cols-2 gap-4">
-                  <span className="text-right">Phone</span>
-                  <input type="text" className="rounded-lg w-80" />
-                </label>
-                <label className="grid grid-cols-2 gap-4">
-                  <span className="text-right">Email</span>
-                  <input type="text" className="rounded-lg w-80" />
-                </label>
-                <button type="submit" className=" self-center text-white bg-dark-blue px-4 py-2">SUBMIT</button>
+                <div className="flex flex-row gap-6 justify-end">
+                  <div className="w-5/12 flex flex-col gap-6">
+                    <label className="grid grid-cols-2 gap-4">
+                      <span className="self-center text-right">Phone</span>
+                      <input type="text" className="rounded-lg px-4 py-2" />
+                    </label>
+                    <label className="grid grid-cols-2 gap-4">
+                      <span className="self-center text-right">Email</span>
+                      <input type="text" className="rounded-lg px-4 py-2" />
+                    </label>
+                  </div>
+                  <div className="w-4/12">
+                      <label className="flex flex-col w-full gap-4">
+                        <span className="w-full text-center">LOTS YOU ARE INTERESTED IN</span>
+                        <input type="text" className="rounded-lg w-auto h-16 text-xl px-4 py-2" />
+                      </label>
+                  </div>
+                </div>
+                <button type="submit" className=" self-center text-white bg-dark-blue px-4 py-2 rounded-lg">SUBMIT</button>
               </form>
             </div>
-            <div className="col-span-2 flex flex-col">
-              <h4 className="font-light">OUR CONTACT INFO</h4>
+            <div className="flex flex-col w-4/12 gap-6">
+              <h4>OUR CONTACT INFO</h4>
               <div className="flex flex-col">
                 <div className="flex flex-row gap-4">
                   <span className="font-light">email</span>
@@ -223,20 +233,34 @@ export default function Home() {
             </div>
           </div>
         </session>
+        <session className="flex flex-row">
+          <div className="w-1/2">
+            <img src="/images/chair-lift.jpg" />
+          </div>
+          <div className="w-1/2 flex flex-col px-10 py-10 pr-28  gap-10">
+            <h2 className="mt-10 font-light text-2xl">SUTTON</h2>
+            <div className="flex flex-col font-light text-lg gap-10">
+              <p className="indent-8">Located about 1 and a half hours from Montreal in the Brome-Missisquoi sector, Sutton is an authentic, charming and welcoming place.</p>
+              <p className="indent-8">First known for its ski resort, the sector has a majestic mountain range offering a wide variety of activities throughout the year.</p>
+              <p className="indent-8">In the heart of the village, you will find microbreweries, bistros, restaurants, cafes and several shops offering local products.</p>
+            </div>
+            <img src="/images/chair-lift-map.jpg" />
+          </div>
+        </session>
       </main>
-      <footer className="flex flex-col pt-20 pb-0 px-10 bg-no-repeat bg-cover bg-[url('/images/footer-image.jpg')] gap-20">
-        <div className="grid grid-cols-5">
-          <h3 className="col-start-2 col-span-3 text-center text-white text-4xl">INTERESTED? WE ARE HERE FOR YOU</h3>
-          <div className="col-start-2 col-span-3 self-center px-72 py-44">
-            <div className="flex flex-col text-2xl bg-dark-blue py-16 gap-10">
-              <h3 className="text-center self-center text-white font-light w-8/12">REACH OUT WITH ANY QUESTIONS OR INQUIRIES</h3>
-              <a href="#contact" className="px-28 py-5 bg-white text-dark-blue self-center text-xl rounded-lg uppercase font-light">contact us</a>
+      <footer className="flex flex-col pt-20 pb-0 px-10 bg-no-repeat bg-fit bg-[url('/images/footer-image.jpg')]">
+        <div className="flex flex-col px-20 mb-20">
+          <h3 className="text-center text-white text-3xl">INTERESTED? WE ARE HERE FOR YOU</h3>
+          <div className="flex flex-col w-full self-center mt-24 px-28 py-2 ml-10">
+            <div className="flex flex-col text-xl bg-dark-blue gap-10 w-5/12 self-center py-10 px-8">
+              <h3 className="text-center self-center text-white font-light">REACH OUT WITH ANY QUESTIONS OR INQUIRIES</h3>
+              <a href="#contact" className="px-8 py-4 bg-white text-dark-blue self-center text-xl rounded-lg uppercase font-light">contact us</a>
             </div>
           </div>
         </div>
-        <div className="w-full grid grid-cols-2">
-          <div className="grid-col-span-2 grid grid-cols-3 pl-20 gap-10">
-            <img className="col-span-2 w-72 h-48" src={logo} />
+        <div className="w-full flex flex-col">
+          <div className="flex flex-row gap-28">
+            <img className="col-span-2 w-40 h-28" src={logo} />
             <div className="flex flex-col">
               <nav className="self-center flex flex-col text-white text-xl font-light gap-4">
                 <a href="#lots">LOTS</a>
