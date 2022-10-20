@@ -7,9 +7,7 @@ const nextConfig = {
     imageSizes: [128, 256, 384],
   },
   i18n: {
-    // providing the locales supported by your application
-    locales: ["en","fr" , "es-ES", "it-IT"],
-    //  default locale used when the non-locale paths are visited
+    locales: ["en","fr" ],
     defaultLocale: "en",
     localeDetection: false
   },
