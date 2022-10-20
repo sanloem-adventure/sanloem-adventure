@@ -125,7 +125,6 @@ const LotSession = () => {
   }
 
   const readArea = (area) => {
-    console.log(area)
     return parse(area.replace("m2", "m<sup>2</sup>"))
   }
 
