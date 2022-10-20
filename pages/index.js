@@ -101,7 +101,7 @@ export default function Home() {
               <form name="contact" method="POST" data-netlify="true" className="self-end font-light text-sm flex flex-col gap-6 mr-20">
                 <label className="flex flex-row gap-4 w-full justify-end">
                   <span className="self-center text-right w-5/12">FIRST NAME</span>
-                  <input type="text" name="first_name" className="rounded-lg w-7/12 px-4 py-2"/>
+                  <input type="text" name="first_name" className="rounded-lg w-7/12 px-4 py-2" />
                 </label>
                 <label className="flex flex-row gap-4 w-full justify-end">
                   <span className="self-center text-right w-5/12">Last NAME</span>
