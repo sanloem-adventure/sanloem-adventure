@@ -63,7 +63,7 @@ export default function Home() {
           <div><h3 className="text-2xl font-light mb-10">THE LOTS</h3></div>
           <div className="flex flex-row">
             <div className="w-1/2 gap-20">
-              <div className="text-gray-400 font-light flex flex-col gap-10">
+              <div className="font-light flex flex-col gap-10">
                 <p>
                   The real estate lots are located along Maple and Poissant roads, halfway between the Village and the ski center. They are intimate, wooded and located a few meters from the Enlever marmite hiking trail and the Sutton River.
                 </p>
