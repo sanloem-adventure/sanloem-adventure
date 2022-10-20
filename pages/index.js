@@ -98,30 +98,30 @@ export default function Home() {
           <h4 className="text-center text-2xl font-light">CONTACT FORM</h4>
           <div className="flex flex-row w-full">
             <div className="flex flex-col gap-10 w-7/12">
-              <form className="self-end font-light text-sm flex flex-col gap-6 mr-20">
+              <form name="contact" method="POST" data-netlify="true" className="self-end font-light text-sm flex flex-col gap-6 mr-20">
                 <label className="flex flex-row gap-4 w-full justify-end">
                   <span className="self-center text-right w-5/12">FIRST NAME</span>
-                  <input type="text" className="rounded-lg w-7/12 px-4 py-2"/>
+                  <input type="text" name="first_name" className="rounded-lg w-7/12 px-4 py-2"/>
                 </label>
                 <label className="flex flex-row gap-4 w-full justify-end">
                   <span className="self-center text-right w-5/12">Last NAME</span>
-                  <input type="text" className="rounded-lg w-7/12 px-4 py-2" />
+                  <input type="text" name="last_name" className="rounded-lg w-7/12 px-4 py-2" />
                 </label>
                 <div className="flex flex-row gap-6 justify-end">
                   <div className="w-5/12 flex flex-col gap-6">
                     <label className="grid grid-cols-2 gap-4">
                       <span className="self-center text-right">Phone</span>
-                      <input type="text" className="rounded-lg px-4 py-2" />
+                      <input type="text" name="phone" className="rounded-lg px-4 py-2" />
                     </label>
                     <label className="grid grid-cols-2 gap-4">
                       <span className="self-center text-right">Email</span>
-                      <input type="text" className="rounded-lg px-4 py-2" />
+                      <input type="email" name="email" className="rounded-lg px-4 py-2" />
                     </label>
                   </div>
                   <div className="w-4/12">
                       <label className="flex flex-col w-full gap-4">
                         <span className="w-full text-center">LOTS YOU ARE INTERESTED IN</span>
-                        <input type="text" className="rounded-lg w-auto h-16 text-xl px-4 py-2" />
+                        <textarea type="text" className="rounded-lg w-auto h-16 text-xl px-4 py-2" />
                       </label>
                   </div>
                 </div>
