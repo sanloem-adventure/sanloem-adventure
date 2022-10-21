@@ -182,7 +182,7 @@ const LotSession = () => {
         <h2 className="font-light text-xl text-center">LOT PLAN</h2>
         <div className="flex flex-col gap-20">
           <div className="w-full max-h-40">
-            <Image width={250} height={250} className="max-h-64" src={`/images/individual_lots/Lot-${currentLot.number}.svg`} />
+            <Image alt={`Lot ${currentLot.number}`} width={250} height={250} className="max-h-64" src={`/images/individual_lots/Lot-${currentLot.number}.svg`} />
           </div>
           <div className="flex flex-col gap-6">
             <h4 className="font-light text-xl">Lot {currentLot.number}</h4>
