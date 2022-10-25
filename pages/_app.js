@@ -20,7 +20,6 @@ function getDirection(locale) {
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
-
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Component {...pageProps} dir={getDirection(locale)} />

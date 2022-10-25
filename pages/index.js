@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from "next/router";
 import { useIntl } from "react-intl";
 import LotSession from '../components/LotSession';
 import HeaderSession from '../components/HeaderSession';
@@ -8,7 +7,6 @@ import ChairLift from '../components/ChairLift';
 import Footer from '../components/Footer';
 
 export default function Home() {
-  const { locales } = useRouter();
   const intl = useIntl();
 
   const sutton_title = intl.formatMessage({ id: "page.home.suttonsession.title" })

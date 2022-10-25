@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 const HeaderSession = ({ header_title, header_description, title, logo }) => {
+
+  const router = useRouter()
   return (
     <div className={`flex flex-col w-full h-auto`}>
       <img
@@ -23,12 +26,12 @@ const HeaderSession = ({ header_title, header_description, title, logo }) => {
             <a>CONTACTE</a>
           </Link>
           <span className="flex flex-row gap-1">
-            <Link href="fr">
-              <a>FR</a>
+            <Link href={`/${router.locale === 'fr' ? 'en' : 'fr'}`} locale={false}>
+              <a className={router.locale === 'fr' ? 'text-secondary' : ''}>FR</a>
             </Link>
             /
-            <Link href="en">
-              <a className="text-secondary">EN</a>
+          <Link href={`/${router.locale === 'en' ? 'fr' : 'en'}`} locale={false}>
+              <a className={router.locale === 'en' ? 'text-secondary' : ''}>EN</a>
             </Link>
           </span>
         </div>
