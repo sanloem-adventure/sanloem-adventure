@@ -23,11 +23,11 @@ const HeaderSession = ({ header_title, header_description, title, logo }) => {
             <a>CONTACTE</a>
           </Link>
           <span className="flex flex-row gap-1">
-            <Link href="/fr">
+            <Link href="fr">
               <a>FR</a>
             </Link>
             /
-            <Link href="/en">
+            <Link href="en">
               <a className="text-secondary">EN</a>
             </Link>
           </span>
@@ -35,7 +35,7 @@ const HeaderSession = ({ header_title, header_description, title, logo }) => {
       </nav>
       <div className="xl:relative aboslute flex flex-col xl:flex-row w-full">
         <div className="xl:top-auto xl:self-end items-end top-28 left-6 xl:relative absolute flex xl:flex-col xl:pl-20 xl:w-6/12 xl:py-28 py-11">
-          <h2 className="xl:absolute relative xl:top-36 xl:self-start 2xl:top-80 2xl:text-3xl text-white xl:text-xl text-[10px] font-light">{header_description}</h2>
+          <h2 className="uppercase xl:absolute relative xl:top-36 xl:self-start 2xl:top-80 2xl:text-3xl text-white xl:text-xl text-[10px] font-light">{header_description}</h2>
         </div>
         <div className="flex flex-col px-10 xl:w-7/12 items-center xl:pb-10 xl:mt-36">
           <div className="flex flex-col xl:self-center self-center">
@@ -43,7 +43,7 @@ const HeaderSession = ({ header_title, header_description, title, logo }) => {
           </div>
           <div className="flex flex-col self-center text-white xl:mt-10 mt-16 xl:gap-8 gap-10">
             <div className="flex flex-col xl:px-44 xl:visible invisible">
-              <h2 className="text-center text-3xl font-normal uppercase leading-loose">{header_title}</h2>
+              <h2 className="2xl:visible xl:visible invisible text-center text-3xl font-normal uppercase leading-loose">{header_title}</h2>
             </div>
             <a href="#contact" className="xl:relative absolute xl:top-auto top-28 xl:right-auto xl:self-center xl:right-auto right-4 uppercase xl:text-normal xl:text-xl text-xs text-center text-white font-light bg-dark-blue py-1 px-2 xl:py-4 rounded-lg xl:w-4/12 xl:px-2 xl:mt-2 mt-10">Contact US</a>
           </div>

@@ -1,11 +1,36 @@
 import React, { useState } from 'react'
 import parse from 'html-react-parser';
 import Image from 'next/image'
+import { useIntl } from "react-intl";
 
 const LotSession = () => {
+  const intl = useIntl();
 
-  const [activeLot, setActiveLot] = useState('')
-  const [currentLot, setCurrentLot] = useState({area: 'm2', number: 1})
+  const lot_title = intl.formatMessage({ id: "page.home.lotsession.title" })
+  const lot_description = intl.formatMessage({ id: "page.home.lotsession.description" })
+  const lot_phase_a = intl.formatMessage({ id: "page.home.lotsession.phase.a" })
+  const lot_phase_a_description = intl.formatMessage({ id: "page.home.lotsession.phase.a.description" })
+  const lot_phase_b = intl.formatMessage({ id: "page.home.lotsession.phase.b" })
+  const lot_phase_b_description = intl.formatMessage({ id: "page.home.lotsession.phase.b.description" })
+  const lot_detail_title = intl.formatMessage({ id: "page.home.lotsession.detail.title" })
+  const lot_map_title = intl.formatMessage({ id: "page.home.lotsession.map.title" })
+  const lot_map_subtitle = intl.formatMessage({ id: "page.home.lotsession.map.subtitle" })
+  const lot_map_area = intl.formatMessage({ id: "page.home.lotsession.map.area" })
+  const lot_map_street = intl.formatMessage({ id: "page.home.lotsession.map.street" })
+  const lot_map_service = intl.formatMessage({ id: "page.home.lotsession.map.service" })
+  const lot_map_zoning = intl.formatMessage({ id: "page.home.lotsession.map.zoning" })
+  const lot_map_price = intl.formatMessage({ id: "page.home.lotsession.map.price" })
+
+  const [activeLot, setActiveLot] = useState(1)
+  const [currentLot, setCurrentLot] = useState({
+    zone: '1, 2 or 3 units / unités',
+    price: '189 000,00$ + TX',
+    service: 'N/A',
+    street: 'Poissant',
+    area: '2,100.00 m2',
+    number: 1,
+    d: "M370.143 256.209L336.441 156.226L364.593 148.206L395.712 141.622H404.498L410.356 143.264L445.785 243.477L391.113 218.013L370.143 256.209Z",
+  })
   const lots = [
     {
       zone: '1, 2 or 3 units / unités',
@@ -123,48 +148,36 @@ const LotSession = () => {
   }
 
   const readArea = (area) => {
-    return parse(area.replace("m2", "m<sup>2</sup>"))
+    return parse(area.replaceAll("m2", "m<sup>2</sup>"))
   }
 
   return (
     <session className="2xl:mt-80 flex flex-col py-10 px-4 2xl:py-20 xl:py-20 2xl:px40 xl:px-40">
-          <div><h3 className="text-2xl font-light mb-10">THE LOTS</h3></div>
+          <div><h3 className="text-2xl font-light mb-10">{lot_title}</h3></div>
           <div className="flex 2xl:flex-row xl:flex-row flex-col">
             <div className="2xl:w-1/2 xl:w-1/2 gap-20 w-full">
               <div className="font-light flex flex-col gap-10">
-                <p>
-                  The real estate lots are located along Maple and Poissant roads, halfway between the Village and the ski center. They are intimate, wooded and located a few meters from the Enlever marmite hiking trail and the Sutton River.
-                </p>
-                <p>
-                  In addition, in order to preserve the ecosystem, the natural state of the site and to allow direct access to pedestrian paths for certain lots, approximately 11,900 m2 of land will be ceded to the municipality. (5,300 m2 during phase A and 6,600 m2 during the development of phase B, to be confirmed by the city).
-                </p>
+                  {parse(lot_description)}
               </div>
             </div>
             <div className="xl:w-1/2 2xl:w-1/2 2xl:px-20 xl:px-20 font-light w-full mt-10 xl:mt-0">
               <div>
-                <h4 className="text-2xl font-light">Phase A</h4>
-                <div className="flex flex-col gap-4">
-                  <p className="indent-4">
-                    11 lots are offered. Most lots have sewer service and have an entrance on Maple Street. They are all located in residential zoning with the possibility of building a single-family, two-family or three-family home. Lots 1 to 10 have an area varying between 2,000 m2 and 4,000 m2.
-                  </p>
-                  <p className="indent-4">
-                    Lot 11 located along the Sutton River has an area of 10,868.90 m2 or 2.68 acres. A true haven of peace in nature with a superb view of the Sutton River. Residential zoning allows the construction of a single-family residence.
-                  </p>
+                <h4 className="text-2xl font-light">{lot_phase_a}</h4>
+                <div className="flex flex-col gap-4 indent-4">
+                  {readArea(lot_phase_a_description)}
                 </div>
               </div>
               <div className="mt-10">
-                <h4 className="text-2xl font-light">Phase B</h4>
-                <p>
-                  Coming soon.
-                </p>
+            <h4 className="text-2xl font-light">{lot_phase_b}</h4>
+                <p>{lot_phase_b_description}</p>
               </div>
             </div>
           </div>
         <div className="flex xl:flex-row flex-col mt-10">
         <div className="flex flex-col xl:w-7/12 w-full gap-10">
           <div className="self-center">
-            <h2 className="text-center text-2xl font-light">MAP</h2>
-            <p className="text-center font-light">Click on a lot to see it in detail.</p>
+            <h2 className="text-center text-2xl font-light">{lot_map_title}</h2>
+            <p className="text-center font-light">{lot_map_subtitle}</p>
           </div>
           <div className="w-full">
             <svg width="100%" height="100%" viewBox="0 0 662 429" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -210,7 +223,7 @@ const LotSession = () => {
           </div>
         </div>
         <div className="flex flex-col xl:gap-10 gap-8 w-full xl:w-5/12 px-10 mt-10 xl:mt-0">
-          <h2 className="font-light text-xl text-center">LOT PLAN</h2>
+          <h2 className="font-light text-xl text-center">{lot_detail_title}</h2>
           <div className="flex flex-col gap-20">
             <div className="w-full max-h-40">
               <Image alt={`Lot ${currentLot.number}`} width={250} height={250} className="max-h-64" src={`/images/individual_lots/Lot-${currentLot.number}.svg`} />
@@ -219,23 +232,23 @@ const LotSession = () => {
               <h4 className="font-light text-xl">Lot {currentLot.number}</h4>
               <div className="flex flex-col font-light">
                 <div className="flex flex-row justify-between">
-                  <span className="font-normal w-1/2">Area:</span>
+                  <span className="font-normal w-1/2 camelcase">{lot_map_area}:</span>
                   <span className="w-1/2">{readArea(currentLot.area)}</span>
                 </div>
                 <div className="flex flex-row justify-between">
-                  <span className="font-normal w-1/2">Street:</span>
+                  <span className="font-normal w-1/2">{lot_map_street}:</span>
                   <span className="w-1/2">{currentLot.street}</span>
                 </div>
                 <div className="flex flex-row justify-between">
-                  <span className="font-normal w-1/2">Service:</span>
+                  <span className="font-normal w-1/2">{lot_map_service}:</span>
                   <span className="w-1/2">{currentLot.service}</span>
                 </div>
                 <div className="flex flex-row justify-between">
-                  <span className="font-normal w-1/2">Zoning:</span>
+                  <span className="font-normal w-1/2">{lot_map_zoning}:</span>
                   <span className="w-1/2">{currentLot.zone}</span>
                 </div>
                 <div className="flex flex-row justify-between">
-                  <span className="font-normal w-1/2">Price:</span>
+                  <span className="font-normal w-1/2">{lot_map_price}:</span>
                   <span className="w-1/2">{currentLot.price}</span>
                 </div>
               </div>

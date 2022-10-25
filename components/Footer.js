@@ -1,19 +1,19 @@
 import React from 'react'
 
-const Footer = ({logo}) => {
+const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, footer_detail }) => {
   return (
     <footer className=" w-full flex flex-col pt-4 xl:pt-20 pb-0 xl:px-10 bg-no-repeat bg-cover bg-[url('/images/footer-image.jpg')]">
       <div className="flex flex-col xl:px-20 px-20 xl:mb-20 mb-10">
-        <h3 className="text-center text-white text-3xl">INTERESTED? WE ARE HERE FOR YOU</h3>
+        <h3 className="text-center text-white text-3xl">{footer_title}</h3>
         <div className="flex flex-col w-full self-center mt-24 xl:px-28 py-2 xl:ml-10">
           <div className="flex flex-col text-xl bg-dark-blue gap-10 xl:w-5/12 self-center py-10 px-8">
-            <h3 className="text-center self-center text-white font-light">REACH OUT WITH ANY QUESTIONS OR INQUIRIES</h3>
-            <a href="#contact" className="xl:px-16 px-4 py-4 bg-white text-dark-blue self-center text-sm xl:text-xl rounded-lg uppercase font-light">contact us</a>
+            <h3 className="text-center self-center text-white font-light">{footer_box_title}</h3>
+            <a href="#contact" className="xl:px-16 px-4 py-4 bg-white text-dark-blue self-center text-sm xl:text-xl rounded-lg uppercase font-light">{footer_box_contact}</a>
           </div>
         </div>
       </div>
       <div className="w-full flex flex-col w-full mb-10">
-        <div className="flex xl:flex-row xl:gap-28 gap-4 px-4">
+        <div className="flex xl:flex-row xl:gap-28 gap-4 px-4 justify-between">
           <img className="xl:col-span-2 w-40 h-28" src={logo} />
           <div className="flex flex-col">
             <nav className="self-center flex flex-col text-white xl:text-xl font-light gap-4">
@@ -21,7 +21,7 @@ const Footer = ({logo}) => {
               <a href="#contact">CONTACT</a>
             </nav>
           </div>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row xl:gap-10 gap-4">
             <a href="" target="_blank">
               <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd" d="M6.34121 0.985256C3.96313 1.54255 2.87564 3.13456 2.79227 6.18078L2.74232 8.00854H1.57673H0.411133V10.4226V12.8366H1.59032H2.76951V18.7682V24.6998H5.19726H7.62501V18.7718V12.8438L9.74061 12.8057L11.8562 12.7676L11.9397 11.733C11.9858 11.164 12.0722 10.0948 12.132 9.35708L12.2405 8.01571L10.0368 7.97764L7.8331 7.93957V6.72014C7.8331 5.01074 7.88623 4.97377 10.3456 4.97377H12.203V2.90461V0.835449L9.53252 0.849243C8.06366 0.856968 6.62769 0.918077 6.34121 0.985256Z" fill="white" />
@@ -36,7 +36,7 @@ const Footer = ({logo}) => {
         </div>
       </div>
       <div className="flex flex-col w-full self-center xl:py-5">
-        <p className="text-center text-white font-light text-xs xl:text-sm xl:mb-0 mb-4">All rights reserved. Chairlift6 Properties. 2022</p>
+        <p className="text-center text-white font-light text-xs xl:text-sm xl:mb-0 mb-4">{footer_detail}</p>
       </div>
     </footer>
   )
