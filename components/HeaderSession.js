@@ -14,24 +14,24 @@ const HeaderSession = ({ header_title, header_description, title, logo }) => {
         className="absolute object-contain md:object-cover"
         alt="header image"
       />
-      <nav className="md:flex-row md:justify-between absolute flex flex-col w-full">
+      <nav className="z-20 md:flex-row md:justify-between absolute flex flex-col w-full">
         <Link href="/">
           <a className="md:mt-10 md:indent-10 2xl:text-xl xl:text-lg md:text-normal md:tracking-[.5em] indent-6 mt-4 text-sm font-light tracking-[.2em] text-start text-white">{title}</a>
         </Link>
         <div className="2xl:pl-60 2xl:gap-48 2xl:pl-60 2xl:relative xl:pl-32 xl:relative xl:gap-32 md:flex-row md:w-1/2 md:py-8 md:text-lg sm:absolute sm:left-0 text-sm self-end py-5 px-5 w-full flex flex-col items-end font-light text-white gap-2">
           <Link href="/#lot">
-            <a>LOTS</a>
+            <a className="px-2 py-2 cursor-pointe">LOTS</a>
           </Link>
           <Link href="/#contact">
-            <a>CONTACTE</a>
+            <a className="hover:cursor-pointer">CONTACTE</a>
           </Link>
           <span className="flex flex-row gap-1">
             <Link href={`/${router.locale === 'fr' ? 'en' : 'fr'}`} locale={false}>
-              <a className={router.locale === 'fr' ? 'text-secondary' : ''}>FR</a>
+              <a className={`${router.locale === 'fr' ? 'text-secondary' : ''} hover:cursor-pointer`}>FR</a>
             </Link>
             /
-          <Link href={`/${router.locale === 'en' ? 'fr' : 'en'}`} locale={false}>
-              <a className={router.locale === 'en' ? 'text-secondary' : ''}>EN</a>
+          <Link href={`${router.locale === 'en' ? 'fr' : 'en'}` } locale={false}>
+              <a className={`${router.locale === 'en' ? 'text-secondary' : ''} hover:cursor-pointer`}>EN</a>
             </Link>
           </span>
         </div>

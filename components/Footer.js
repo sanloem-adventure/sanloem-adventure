@@ -13,10 +13,10 @@ const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, foot
         </div>
       </div>
       <div className="w-full flex flex-col w-full mb-10">
-        <div className="flex xl:flex-row xl:gap-28 gap-4 px-4 justify-between">
-          <img className="xl:col-span-2 w-40 h-28" src={logo} />
-          <div className="flex flex-col">
-            <nav className="self-center flex flex-col text-white xl:text-xl font-light gap-4">
+        <div className="grid grid-cols-2 xl:justify-items-non justify-items-center xl:flex xl:flex-row xl:gap-28 gap-10 px-4 xl:justify-start justify-between">
+          <img className="col-span-2 w-40 h-28" src={logo} />
+          <div className="xl:flex xl:flex-col">
+            <nav className="self-center flex flex-row xl:flex-col text-white xl:text-xl font-light gap-4">
               <a href="#lots">LOTS</a>
               <a href="#contact">CONTACT</a>
             </nav>

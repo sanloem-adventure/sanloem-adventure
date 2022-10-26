@@ -152,7 +152,7 @@ const LotSession = () => {
   }
 
   return (
-    <session className="2xl:mt-80 flex flex-col py-10 px-4 2xl:py-20 xl:py-20 2xl:px40 xl:px-40">
+    <session id="lot" className="2xl:mt-80 flex flex-col py-10 px-4 2xl:py-20 xl:py-20 2xl:px40 xl:px-40">
           <div><h3 className="text-2xl font-light mb-10">{lot_title}</h3></div>
           <div className="flex 2xl:flex-row xl:flex-row flex-col">
             <div className="2xl:w-1/2 xl:w-1/2 gap-20 w-full">
