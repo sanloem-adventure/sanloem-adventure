@@ -2,22 +2,22 @@ import React from 'react'
 
 const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, footer_detail }) => {
   return (
-    <footer className=" w-full flex flex-col pt-4 xl:pt-20 pb-0 xl:px-10 bg-no-repeat bg-cover bg-[url('/images/footer-image.jpg')]">
-      <div className="flex flex-col xl:px-20 px-20 xl:mb-20 mb-10">
-        <h3 className="text-center text-white text-3xl">{footer_title}</h3>
-        <div className="flex flex-col w-full self-center mt-24 xl:px-28 py-2 xl:ml-10">
-          <div className="flex flex-col text-xl bg-dark-blue gap-10 xl:w-5/12 self-center py-10 px-8">
+    <footer className="w-full flex flex-col pb-0 xl:px-10 bg-no-repeat bg:contain xl:bg-cover bg-[url('/images/footer-image.jpg')] md:max-w-{766.42px} md:h-[766.42px]">
+      <div className="flex flex-col xl:mb-20 mb-10 self-center">
+        <h3 className="text-center text-white xl:text-3xl text-lg mt-24">{footer_title}</h3>
+        <div className="flex flex-col self-center mt-24 xl:px-28 py-2 xl:ml-10 md:max-w-max xs:max-w-xs">
+          <div className="flex flex-col text-xl bg-dark-blue gap-10 md:max-w-sm self-center py-10 px-8">
             <h3 className="text-center self-center text-white font-light">{footer_box_title}</h3>
             <a href="#contact" className="xl:px-16 px-4 py-4 bg-white text-dark-blue self-center text-sm xl:text-xl rounded-lg uppercase font-light">{footer_box_contact}</a>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col w-full mb-10">
+      <div className="w-full flex flex-col w-full">
         <div className="grid grid-cols-2 xl:justify-items-non justify-items-center xl:flex xl:flex-row xl:gap-28 gap-10 px-4 xl:justify-start justify-between">
           <img className="col-span-2 w-40 h-28" src={logo} />
           <div className="xl:flex xl:flex-col">
             <nav className="self-center flex flex-row xl:flex-col text-white xl:text-xl font-light gap-4">
-              <a href="#lots">LOTS</a>
+              <a href="#lot">LOTS</a>
               <a href="#contact">CONTACT</a>
             </nav>
           </div>
@@ -35,7 +35,7 @@ const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, foot
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full self-center xl:py-5">
+      <div className="flex flex-col w-full self-center xl:py-5 xs:mt-10">
         <p className="text-center text-white font-light text-xs xl:text-sm xl:mb-0 mb-4">{footer_detail}</p>
       </div>
     </footer>
