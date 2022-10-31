@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, footer_detail }) => {
   return (
-    <footer className="w-full flex flex-col pb-0 xl:px-10 bg-no-repeat bg:contain xl:bg-cover bg-[url('/images/footer-image.jpg')] md:max-w-{766.42px} md:h-[766.42px]">
+    <footer className="w-full flex flex-col pb-0 xl:px-10 bg-no-repeat bg:contain bg-[url('/images/footer-image.jpg')] md:max-w-[1390px] mx-auto md:h-[766.42px]">
       <div className="flex flex-col xl:mb-20 mb-10 self-center">
         <h3 className="text-center text-white xl:text-3xl text-lg mt-24">{footer_title}</h3>
         <div className="flex flex-col self-center mt-24 xl:px-28 py-2 xl:ml-10 md:max-w-max xs:max-w-xs">

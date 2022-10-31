@@ -25,12 +25,12 @@ export default function Home() {
   const footer_detail = intl.formatMessage({id: "page.home.footer.details"})
 
   return (
-    <div className="flex flex-col max-w-{1280px} min-w-{1280px}">
+    <div className="flex flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
-      <main className="flex flex-col max-w-{1280px} min-w-{1280px} h-full">
+      <main className="flex flex-col h-full">
         <HeaderSession title={title} header_title={header_title} header_description={header_description} logo={logo} contact={contact}/>
         <LotSession/>
         <ContactForm/>
