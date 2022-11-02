@@ -22,7 +22,14 @@ const ContactForm = () => {
       </div>
       <div className="flex lg:flex-row  flex-col w-full">
         <div className="flex flex-col gap-10 md:w-8/12 xs:px-4">
-          <form name="contact" method="POST" data-netlify="true" onSubmit="submit" className="flex flex-col gap-6 w-full font-light">
+          <form name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
+            action="/thank-you"
+            onSubmit="submit"
+            className="flex flex-col gap-6 w-full font-light">
             <label className="flex flex-col md:flex-row gap-4 w-full md:justify-end">
               <span className="text-start md:text-right w-full md:w-5/12 uppercase">{contact_first_name}</span>
               <input type="text" name="first_name" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
