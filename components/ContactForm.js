@@ -20,7 +20,7 @@ const ContactForm = () => {
           <h4 className="md:self-end self-center text-center xs:text-xl text-2xl font-light">{contact_title}</h4>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col w-full">
+      <div className="flex lg:flex-row  flex-col w-full">
         <div className="flex flex-col gap-10 md:w-8/12 xs:px-4">
           <form name="contact" method="POST" data-netlify="true" className="flex flex-col gap-6 w-full font-light">
             <label className="flex flex-col md:flex-row gap-4 w-full md:justify-end">
@@ -35,8 +35,8 @@ const ContactForm = () => {
               <span className="text-start md:text-right w-full md:w-5/12 uppercase">{contact_email}</span>
               <input type="email" name="email" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
             </label>
-            <div className="flex flex-col gap-10 md:flex-row w-full 2xl:pl-5 md:pl-6">
-              <div className="self-end w-full md:w-9/12 flex flex-col gap-6">
+            <div className="flex flex-col gap-10 md:flex-row w-full 2xl:pl-5 md:pl-11">
+              <div className="self-end w-full xl:w-9/12 md:w-10/12 flex flex-col gap-6">
                 <label className="flex flex-col md:flex-row gap-4 w-full justify-end md:pr-3">
                   <span className="self-start md:text-end md:self-center md:w-40 uppercase font-light">{contact_phone}</span>
                   <input type="text" name="phone" className="md:w-5/12 h-10 rounded-lg md:px-0 px-4 md:py-2" />
@@ -52,7 +52,7 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-        <div className="mt-16 self-start justify-start flex flex-col px-4 sm:pl-16 md:w-4/12 gap-2 md:gap-6 w-full">
+        <div className="mt-16 md:self-center self-start justify-start flex flex-col px-4 sm:pl-16 md:w-4/12 gap-2 md:gap-6 w-full">
           <h4 className="text-center md:text-start text-xl font-light">{contact_subtitle}</h4>
           <div className="self-center md:self-start flex flex-col">
             <div className="flex flex-row gap-4">
