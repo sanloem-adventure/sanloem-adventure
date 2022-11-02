@@ -27,7 +27,7 @@ const ContactForm = () => {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             data-netlify-recaptcha="true"
-            action="/thank-you"
+            action="/thanks"
             onSubmit="submit"
             className="flex flex-col gap-6 w-full font-light">
             <label className="flex flex-col md:flex-row gap-4 w-full md:justify-end">
