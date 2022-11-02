@@ -2,26 +2,26 @@ import React from 'react'
 
 const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, footer_detail }) => {
   return (
-    <footer className="w-full flex flex-col pb-0 xl:px-10 bg-no-repeat bg:contain bg-[url('/images/footer-image.jpg')] md:max-w-[1390px] mx-auto md:h-[766.42px]">
+    <footer className="flex flex-col mx-auto w-full min-h-[670px] px-40 xs:px-4 bg-no-repeat bg-cover bg-[url('/images/footer-image.jpg')]">
       <div className="flex flex-col xl:mb-20 mb-10 self-center">
         <h3 className="text-center text-white xl:text-3xl text-lg mt-24">{footer_title}</h3>
         <div className="flex flex-col self-center mt-24 xl:px-28 py-2 xl:ml-10 md:max-w-max xs:max-w-xs">
           <div className="flex flex-col text-xl bg-dark-blue gap-10 md:max-w-sm self-center py-10 px-8">
             <h3 className="text-center self-center text-white font-light">{footer_box_title}</h3>
-            <a href="#contact" className="xl:px-16 px-4 py-4 bg-white text-dark-blue self-center text-sm xl:text-xl rounded-lg uppercase font-light">{footer_box_contact}</a>
+            <a href="#contact" className="xl:px-16 px-4 py-4 bg-white text-dark-blue self-center text-sm xl:text-xl rounded-lg uppercase xs:text-center font-light xs:w-6/12 xs:w-full">{footer_box_contact}</a>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col w-full">
-        <div className="grid grid-cols-2 xl:justify-items-non justify-items-center xl:flex xl:flex-row xl:gap-28 gap-10 px-4 xl:justify-start justify-between">
-          <img className="col-span-2 w-40 h-28" src={logo} />
-          <div className="xl:flex xl:flex-col">
+      <div className="flex flex-col w-full">
+        <div className="grid grid-cols-2 xl:justify-items-non justify-items-center xl:flex xl:flex-row xl:gap-28 gap-10 px-4 md:justify-start justify-between">
+          <img className="col-span-2 sm:w-40 sm:h-28 xs:w-40 xs:h-28" src={logo} />
+          <div className="xl:flex xl:flex-co xs:w-1/2 ">
             <nav className="self-center flex flex-row xl:flex-col text-white xl:text-xl font-light gap-4">
               <a href="#lot">LOTS</a>
               <a href="#contact">CONTACT</a>
             </nav>
           </div>
-          <div className="flex flex-row xl:gap-10 gap-4">
+          <div className="flex flex-row md:gap-10 gap-4 md:w-full w-1/2">
             <a href="" target="_blank">
               <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd" d="M6.34121 0.985256C3.96313 1.54255 2.87564 3.13456 2.79227 6.18078L2.74232 8.00854H1.57673H0.411133V10.4226V12.8366H1.59032H2.76951V18.7682V24.6998H5.19726H7.62501V18.7718V12.8438L9.74061 12.8057L11.8562 12.7676L11.9397 11.733C11.9858 11.164 12.0722 10.0948 12.132 9.35708L12.2405 8.01571L10.0368 7.97764L7.8331 7.93957V6.72014C7.8331 5.01074 7.88623 4.97377 10.3456 4.97377H12.203V2.90461V0.835449L9.53252 0.849243C8.06366 0.856968 6.62769 0.918077 6.34121 0.985256Z" fill="white" />
@@ -35,7 +35,7 @@ const Footer = ({ logo, footer_title, footer_box_title, footer_box_contact, foot
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full self-center xl:py-5 xs:mt-10">
+      <div className="flex flex-col w-full self-center xl:py-5 mt-20 ">
         <p className="text-center text-white font-light text-xs xl:text-sm xl:mb-0 mb-4">{footer_detail}</p>
       </div>
     </footer>

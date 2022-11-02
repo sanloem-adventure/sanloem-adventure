@@ -143,8 +143,8 @@ const LotSession = () => {
   }
 
   return (
-    <session id="lot" className="flex flex-col py-10 max-w-screen-lg sm:mx-auto xs:px-4">
-          <div className="flex sm:flex-row flex-col w-full xs:gap-4 gap-20 max-w-4xl mx-auto">
+    <session id="lot" className="flex flex-col py-10 md:mx-auto px-4">
+          <div className="flex md:flex-row flex-col w-full xs:gap-4 gap-20 sm:px-20 max-w-4xl mx-auto">
             <div className="md:w-1/2 xs:w-full gap-20">
               <h3 className="text-2xl font-light mb-8">{lot_title}</h3>
               <div className="font-light flex flex-col gap-10 text-[18px] md:max-w-[383px] text-justify">

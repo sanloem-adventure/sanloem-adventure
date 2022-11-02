@@ -8,9 +8,9 @@ const nextConfig = {
   },
   i18n: {
     // providing the locales supported by your application
-    locales: ["en","fr" , "es-ES", "it-IT"],
+    locales: ["en","fr"],
     //  default locale used when the non-locale paths are visited
-    defaultLocale: "en",
+    defaultLocale: "fr",
     localeDetection: false
   },
   optimizeFonts: true
