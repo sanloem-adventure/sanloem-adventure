@@ -30,7 +30,7 @@ const ContactForm = () => {
       <div className="flex lg:flex-row  flex-col w-full">
         <div className="flex flex-col gap-10 md:w-8/12 xs:px-4">
           <form name="contact"
-            action="?contact_success=true"
+            action={`/${router.locale}/?contact_success=true`}
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -57,7 +57,7 @@ const ContactForm = () => {
               <div className="self-end w-full xl:w-9/12 md:w-10/12 flex flex-col gap-6">
                 <label htmlFor="phone" className="flex flex-col md:flex-row gap-4 w-full justify-end md:pr-3">
                   <span className="self-start md:text-end md:self-center md:w-40 uppercase font-light">{contact_phone}</span>
-                  <input id="phone" type="text" required name="phone" className="md:w-5/12 h-10 rounded-lg px-4 md:py-2" />
+                  <input id="phone" type="text" name="phone" className="md:w-5/12 h-10 rounded-lg px-4 md:py-2" />
                 </label>
                 <label htmlFor="interest" className="flex flex-col md:flex-row gap-4 w-full justify-end sm:pr-3">
                   <span className="self-start md:text-end  md:self-center w-full md:w-40 font-light text-sm">{interest}</span>
