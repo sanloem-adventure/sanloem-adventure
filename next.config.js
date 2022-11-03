@@ -13,8 +13,7 @@ const nextConfig = {
     defaultLocale: "fr",
     localeDetection: false
   },
-  optimizeFonts: true,
-  target: 'serverless'
+  optimizeFonts: true
 }
 
 module.exports = nextConfig
