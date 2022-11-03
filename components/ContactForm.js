@@ -23,11 +23,16 @@ const ContactForm = () => {
       <div className="flex lg:flex-row  flex-col w-full">
         <div className="flex flex-col gap-10 md:w-8/12 xs:px-4">
           <form name="contact"
+            action="?contact_success=true"
             method="POST"
-            action="/thanks"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             className="flex flex-col gap-6 w-full font-light">
+            <p hidden>
+              <label>
+                <input name="bot-field" />
+              </label>
+            </p>
             <label className="flex flex-col md:flex-row gap-4 w-full md:justify-end">
               <span className="text-start md:text-right w-full md:w-5/12 uppercase">{contact_first_name}</span>
               <input type="text" name="first_name" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
