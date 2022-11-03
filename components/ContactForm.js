@@ -33,27 +33,28 @@ const ContactForm = () => {
                 <input name="bot-field" />
               </label>
             </p>
-            <label className="flex flex-col md:flex-row gap-4 w-full md:justify-end">
+            <input type="hidden" name="form-name" value="contact" />
+            <label htmlFor="first_name" className="flex flex-col md:flex-row gap-4 w-full md:justify-end">
               <span className="text-start md:text-right w-full md:w-5/12 uppercase">{contact_first_name}</span>
-              <input type="text" name="first_name" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
+              <input id="first_name" type="text" name="first_name" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
             </label>
-            <label className="flex flex-col md:flex-row gap-4 w-full justify-end">
+            <label htmlFor="last_name" className="flex flex-col md:flex-row gap-4 w-full justify-end">
               <span className="text-start md:text-right w-full md:w-5/12 uppercase">{contact_name_name}</span>
-              <input type="text" name="last_name" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
+              <input id="last_name" type="text" name="last_name" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
             </label>
-            <label className="flex flex-col md:flex-row gap-4 w-full justify-end">
+            <label htmlFor="email" className="flex flex-col md:flex-row gap-4 w-full justify-end">
               <span className="text-start md:text-right w-full md:w-5/12 uppercase">{contact_email}</span>
-              <input type="email" name="email" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
+              <input id="email" type="email" name="email" className="rounded-lg w-full md:w-7/12 px-4 py-2"/>
             </label>
             <div className="flex flex-col gap-10 md:flex-row w-full 2xl:pl-5 md:pl-11">
               <div className="self-end w-full xl:w-9/12 md:w-10/12 flex flex-col gap-6">
-                <label className="flex flex-col md:flex-row gap-4 w-full justify-end md:pr-3">
+                <label htmlFor="phone" className="flex flex-col md:flex-row gap-4 w-full justify-end md:pr-3">
                   <span className="self-start md:text-end md:self-center md:w-40 uppercase font-light">{contact_phone}</span>
-                  <input type="text" name="phone" className="md:w-5/12 h-10 rounded-lg px-4 md:py-2" />
+                  <input id="phone" type="text" name="phone" className="md:w-5/12 h-10 rounded-lg px-4 md:py-2" />
                 </label>
-                <label className="flex flex-col md:flex-row gap-4 w-full justify-end sm:pr-3">
+                <label htmlFor="interest" className="flex flex-col md:flex-row gap-4 w-full justify-end sm:pr-3">
                   <span className="self-start md:text-end  md:self-center w-full md:w-40 font-light text-sm">{interest}</span>
-                  <input type="text" name="interest" className="rounded-lg h-10 md:w-5/12 px-4 py-2"/>
+                  <input id="interest" type="text" name="interest" className="rounded-lg h-10 md:w-5/12 px-4 py-2"/>
                 </label>
               </div>
               <div className="md:w-3/12 w-full flex flex-col self-end md:pl-10 justify-end">
