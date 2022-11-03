@@ -49,7 +49,7 @@ const ContactForm = () => {
               <div className="self-end w-full xl:w-9/12 md:w-10/12 flex flex-col gap-6">
                 <label className="flex flex-col md:flex-row gap-4 w-full justify-end md:pr-3">
                   <span className="self-start md:text-end md:self-center md:w-40 uppercase font-light">{contact_phone}</span>
-                  <input type="text" name="phone" className="md:w-5/12 h-10 rounded-lg md:px-0 px-4 md:py-2" />
+                  <input type="text" name="phone" className="md:w-5/12 h-10 rounded-lg px-4 md:py-2" />
                 </label>
                 <label className="flex flex-col md:flex-row gap-4 w-full justify-end sm:pr-3">
                   <span className="self-start md:text-end  md:self-center w-full md:w-40 font-light text-sm">{interest}</span>
