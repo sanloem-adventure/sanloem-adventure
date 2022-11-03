@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 
 const ContactForm = () => {
   const intl = useIntl();
@@ -12,9 +13,15 @@ const ContactForm = () => {
   const contact_email = intl.formatMessage({ id: "page.home.contact.form.email" })
   const contact_submit = intl.formatMessage({ id: "page.home.contact.form.submit" })
   const interest = intl.formatMessage({ id: "page.home.contact.form.interest" })
+  const after_submit = intl.formatMessage({ id: "page.home.contact.form.after_submit" })
+
+  const router = useRouter()
+  const { contact_success } = router.query
+  const [isSuccess, setIsSuccess] = useState(true)
 
   return (
     <session id="contact" className="flex flex-col xs:px-10 sm:py-20 bg-secondary gap-10 w-full mx-auto xs:py-10 px-4 py-10">
+      {contact_success && isSuccess ? <div className="mx-auto w-96 rounded-lg text-center text-white text-lg px-4 py-2 bg-primary relative"><p>{after_submit}</p> <span className="absolute top-3 right-3 cursor-pointer text-sm rounded-full" onClick={() => setIsSuccess(false)}>x</span></div> : ''}
       <div className="w-full flex flex-row">
         <div className="md:w-7/12 w-full flex flex-col">
           <h4 className="md:self-end self-center text-center xs:text-xl text-2xl font-light">{contact_title}</h4>
