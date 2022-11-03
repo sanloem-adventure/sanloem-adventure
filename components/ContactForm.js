@@ -16,7 +16,7 @@ const ContactForm = () => {
   const after_submit = intl.formatMessage({ id: "page.home.contact.form.after_submit" })
 
   const router = useRouter()
-  const { contact_success } = router.query
+  const { contact_success, local } = router.query
   const [isSuccess, setIsSuccess] = useState(true)
 
   return (
@@ -30,7 +30,7 @@ const ContactForm = () => {
       <div className="flex lg:flex-row  flex-col w-full">
         <div className="flex flex-col gap-10 md:w-8/12 xs:px-4">
           <form name="contact"
-            action={`/${router.locale}/?contact_success=true`}
+            action={`${router.locale}/?contact_success=true`}
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
