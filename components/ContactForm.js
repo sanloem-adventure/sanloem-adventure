@@ -21,7 +21,7 @@ const ContactForm = () => {
 
 
   useLayoutEffect(()=>{
-    lang !== undefined ? router.push(`/${lang}/?contact_success=true`) : ''
+    lang !== undefined ? router.push(`/${lang}/#contact`) : ''
   })
 
   return (
