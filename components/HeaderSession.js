@@ -36,13 +36,10 @@ const HeaderSession = ({ header_title, header_description, title, logo, contact 
           <h2 className={`uppercase xs:text-center text-white text-xl font-light ${router.locale === 'fr' ? 'xs:text-[9px]' : 'xs:text-[10px]'}`}>{header_description}</h2>
         </div>
         <div className="flex flex-col md:w-7/12 items-center xl:pb-10 2xl:gap-10 xl:mt-20 lg:mt-20 mt-10 max-w-2xl px-6">
-          <div className="flex flex-col sm:self-start lg:pl-30 sm:pl-28 self-center">
+          <div className="flex flex-col self-cetner">
             <img className="md:relative absolute z-20 md:left-auto left-6 md:top-auto top-20 w-22 h-16 md:w-60 md:h-48" src={logo} />
           </div>
-          <div className="xs:hidden flex flex-col self-start text-white md:mt-10 -mt-20 xl:gap-8 gap-10 lg:mr-20 md:mr-20">
-            <div className={`flex flex-col ${router.locale === 'fr' ? 'md:px-16' : 'md:px-20'} 2xl:visible md:visible invisible`}>
-              <h2 className="md:visible invisible text-center text-3xl lg:text-2xl md:text-xl font-normal uppercase leading-loose">{header_title}</h2>
-            </div>
+          <div className="xs:hidden flex flex-col self-start text-white md:mt-10 -mt-20 xl:gap-8 gap-10 lg:mr-20 md:mr-20 w-full">
             <AnchorLink className={`md:relative xs:hidden sm:top-auto top-28 sm:right-auto sm:self-center sm:right-auto right-4 uppercase sm:text-normal xl:text-xl text-xs text-center text-white font-light bg-dark-blue py-1 px-2 sm:py-3 sm:px-6 rounded-lg xl:mt-2 mt-14 xs:w-3/12 ${router.locale === 'fr' ? 'w-6/12 xs:w-4/12 xs:text-[10px]' : 'w-5/12'}`} href="#contact">{contact}</AnchorLink>
           </div>
         </div>
