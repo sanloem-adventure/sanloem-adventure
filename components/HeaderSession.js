@@ -37,7 +37,7 @@ const HeaderSession = ({ header_title, header_description, title, logo, contact 
         </div>
         <div className="flex flex-col md:w-7/12 items-center xl:pb-10 2xl:gap-10 xl:mt-20 lg:mt-20 mt-10 max-w-2xl px-6">
           <div className="flex flex-col sm:self-start lg:pl-30 sm:pl-28 self-center">
-            <img className="md:relative absolute z-20 md:left-auto left-6 md:top-auto top-20 w-22 h-16 md:w-60 md:h-36" src={logo} />
+            <img className="md:relative absolute z-20 md:left-auto left-6 md:top-auto top-20 w-22 h-16 md:w-60 md:h-48" src={logo} />
           </div>
           <div className="xs:hidden flex flex-col self-start text-white md:mt-10 -mt-20 xl:gap-8 gap-10 lg:mr-20 md:mr-20">
             <div className={`flex flex-col ${router.locale === 'fr' ? 'md:px-16' : 'md:px-20'} 2xl:visible md:visible invisible`}>
