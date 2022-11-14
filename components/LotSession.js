@@ -109,7 +109,7 @@ const LotSession = () => {
     {
       zone: '1, 2 or 3 units / unités',
       price: '169 000,00$ + TX',
-      service: 'N/A',
+      service: 'Sewer / Égout',
       street: 'Maple',
       area: '2 725,60 m2',
       number: 9,
