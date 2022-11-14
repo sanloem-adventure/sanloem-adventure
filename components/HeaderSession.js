@@ -13,7 +13,7 @@ const HeaderSession = ({ header_title, header_description, title, logo, contact 
         <Link href="/">
           <a className="md:w-1/2 w-full sm:indent-10 2xl:text-xl xl:text-lg sm:tracking-[.5em] indent-6 mt-10 sm:text-lg text-sm font-light tracking-[.2em] text-start text-white md:text-sm">{title}</a>
         </Link>
-        <div className="text-sm py-5 md:py-0 md:w-1/2 w-full md:flex-row flex flex-col xs:flex-col-reverse font-light text-white 2xl:gap-40 xl:gap-32 lg:gap-36 xl:justify-start lg:justify-end xl:pro-0 lg:pr-10 xl:pl-40 sm:gap-6 xl:text-lg md:items-start md:justify-end items-end  self-end gap-4 lg:pr-0 md:pr-10 pr-4">
+        <div className="text-sm py-5 md:py-0 md:w-1/2 w-full md:flex-row flex flex-col xs:flex-col-reverse font-light text-white 2xl:gap-40 xl:gap-32 lg:gap-36 xl:justify-start lg:justify-end xl:pro-0 lg:pr-10 xl:pl-40 sm:gap-6 xl:text-lg md:items-start md:justify-end items-end  self-end gap-4 lg:pr-0 md:pr-10 pr-4 lg:pr-20">
           <AnchorLink className="cursor-pointe" href="#lot">
             LOTS
           </AnchorLink>
