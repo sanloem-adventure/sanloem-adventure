@@ -19,7 +19,6 @@ const ContactForm = () => {
   const { contact_success, lang } = router.query
   const [isSuccess, setIsSuccess] = useState(true)
 
-
   useLayoutEffect(()=>{
     lang !== undefined ? router.push(`/${lang}/#contact`) : ''
   })
