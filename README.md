@@ -11,4 +11,4 @@ yarn dev
 ```
 #### Use Volta to manage project
 
-[Breakdance](https://docs.volta.sh/guide/understanding#managing-your-project)
+[Volta Docs](https://docs.volta.sh/guide/understanding#managing-your-project)
