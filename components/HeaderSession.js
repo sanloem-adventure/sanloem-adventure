@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from "next/router";
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2'
 
-const HeaderSession = ({ header_title, header_description, title, logo, contact }) => {
+const HeaderSession = ({ header_title, title, logo, contact }) => {
 
   const router = useRouter()
 
@@ -33,7 +33,7 @@ const HeaderSession = ({ header_title, header_description, title, logo, contact 
       </nav>
       <div className={`flex flex-col md:flex-row w-ful 2xl:pt-28 2xl:pl-48`}>
         <div className="absolute md:relative top-20 md:top-auto w-full flex flex-col md:w-1/2 self-start mb-20 self-end items-center xs:items-start px-10 h-16 pt-16 pt-20">
-          <h2 className={`uppercase xs:text-center text-white text-xl font-light ${router.locale === 'fr' ? 'xs:text-[9px]' : 'xs:text-[10px]'}`}>{header_description}</h2>
+          {/* <h2 className={`uppercase xs:text-center text-white text-xl font-light ${router.locale === 'fr' ? 'xs:text-[9px]' : 'xs:text-[10px]'}`}>{header_description}</h2> */}
         </div>
         <div className="flex flex-col md:w-7/12 items-center xl:pb-10 2xl:gap-10 xl:mt-20 lg:mt-20 mt-10 max-w-2xl px-6">
           <div className="flex flex-col self-cetner">

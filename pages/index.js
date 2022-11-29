@@ -15,7 +15,6 @@ export default function Home() {
   const title = intl.formatMessage({ id: "page.home.head.title" });
   const description = intl.formatMessage({ id: "page.home.head.meta.description" });
   const header_title = intl.formatMessage({ id: "page.home.header.title" });
-  const header_description = intl.formatMessage({ id: "page.home.header.description" });
   const contact = intl.formatMessage({ id: "page.home.header.contact" });
   const logo = intl.formatMessage({ id: "page.home.logo" });
 
@@ -31,7 +30,7 @@ export default function Home() {
         <meta name="description" content={description} />
       </Head>
       <main className="flex flex-col h-full">
-        <HeaderSession title={title} header_title={header_title} header_description={header_description} logo={logo} contact={contact}/>
+        <HeaderSession title={title} header_title={header_title} logo={logo} contact={contact}/>
         <LotSession/>
         <ContactForm/>
         <ChairLift sutton_title={sutton_title} sutton_description={sutton_description} />
