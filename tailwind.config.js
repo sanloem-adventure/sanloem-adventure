@@ -17,7 +17,8 @@ module.exports = {
         'secondary': '#D8BC86',
         'white': '#FFFFFF',
         'black': '#000000',
-        'dark-blue': "#1C4D7F"
+        'dark-blue': "#1C4D7F",
+        'red': "#b91c1c"
       },
       fontFamily: {
         inter: ["Inter"],
