@@ -1,3 +1,9 @@
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "*"
+    Access-Control-Allow-Headers = "*"
 [build]
   command = "yarn run build"
   publish = ".next"
