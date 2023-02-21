@@ -26,16 +26,19 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>TRIBE ISLAND ADVENTURES</title>
+        <meta name="description" content="Join us today for great island adventure on koh rong sanloem" />
       </Head>
-      <main className="flex flex-col h-full">
-        <HeaderSession title={title} header_title={header_title} logo={logo} contact={contact}/>
-        <LotSession/>
-        <ContactForm/>
-        <ChairLift sutton_title={sutton_title} sutton_description={sutton_description} />
+      <main className="flex flex-col h-full px-10 justify-center items-center pt-10">
+        <div className="py-10 text-center">
+          <h1 className="xl:text-2xl">BOOK YOUR ACTIVITIES ON THE ISLAND NOW WITH US!</h1>
+          <h1 className="xl:text-2xl">+855889278813</h1>
+        </div>
+        <div className="flex min-h-2/4 flex-col  xl:flex-row justify-center items-center">
+          <img width="50%" src="images/tribe-adventures.png" />
+          <img width="50%" src="images/bensgarden-poster.png"/>
+        </div>
       </main>
-      <Footer logo={logo} footer_title={footer_title} footer_box_title={footer_box_title} footer_box_contact={footer_box_contact} footer_detail={footer_detail} />
     </div>
   )
 }
