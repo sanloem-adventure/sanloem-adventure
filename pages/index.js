@@ -32,7 +32,7 @@ export default function Home() {
       <main className="flex flex-col h-full px-10 justify-center items-center pt-10">
         <div className="py-10 text-center">
           <h1 className="xl:text-2xl">BOOK YOUR ACTIVITIES ON THE ISLAND NOW WITH US!</h1>
-          <h1 className="xl:text-2xl">+855889278813</h1>
+          <h1 className="xl:text-2xl">+85516777631</h1>
         </div>
         <div className="flex min-h-2/4 flex-col  xl:flex-row justify-center items-center">
           <img width="50%" src="images/tribe-adventures.png" />
